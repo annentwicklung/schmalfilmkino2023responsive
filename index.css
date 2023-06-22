@@ -110,7 +110,8 @@ div.page-right {
 
 /* Navigation top */
 
-
+input#navbar-toggler {
+}
 
 
 div.navigation-top {
@@ -157,6 +158,8 @@ div.navigation-top .navbar ul li a, div.navigation-top .navbar ul li a:visited, 
 }
 
 @media only screen and (max-width: 45em) {
+
+	
 
 	div.navigation-top .navbar  {
 		display: none;
