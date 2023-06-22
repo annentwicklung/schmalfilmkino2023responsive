@@ -110,6 +110,7 @@ div.page-right {
 
 /* Navigation top */
 
+
 input#navbar-toggler {
 }
 
@@ -159,11 +160,66 @@ div.navigation-top .navbar ul li a, div.navigation-top .navbar ul li a:visited, 
 
 @media only screen and (max-width: 45em) {
 
-	
+#burger-menu {
+  display: flex; 
+  align-items: center;  
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  cursor: pointer;
+  z-index: 1;
+}
 
-	div.navigation-top .navbar  {
-		display: none;
-	}
+#burger-menu > span,
+#burger-menu > span::before,
+#burger-menu > span::after {
+  display: block;
+  position: absolute;
+  width: 2.25rem;
+  height: 2px;
+  background-color: #616161;
+  transition: 0.3s;
+}
+#burger-menu > span::before {
+  content: '';
+  top: -0.5rem;
+}
+#burger-menu > span::after {
+  content: '';
+  top: 0.5rem;
+}
+
+#navbar-toggler:checked ~ #burger-menu > span {
+  transform: rotate(45deg);
+}
+
+#navbar-toggler:checked ~ #burger-menu > span::before {
+  top: 0; transform: rotate(0);
+}
+
+#navbar-toggler:checked ~ #burger-menu > span::after {
+  top: 0; transform: rotate(90deg);
+}
+
+#main-menu {
+  display:block;
+}
+#nav-toggler, #burger-menu {
+  display:none;
+}
+
+#navbar-toggler~#main-menu {
+    display:none;
+}
+#navbar-toggler:checked~#main-menu {
+    display:block;
+}
+  
+#main-menu {transition: transform 1s ease-in-out;}
+  
+
 
 }
 
