@@ -1,0 +1,512 @@
+/*
+Theme Name: Schmalfilmkino 2023 responsive
+Theme URI: https://wordpress.org/themes/twentyseventeen/
+Author: Annett Riechert and the WordPress team
+Author URI: https://wordpress.org/
+Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 2.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidbar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/* General configuration */
+
+body {
+
+    font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: #232323;
+	overflow-y: hidden; /*hidden;*/
+}
+
+p {
+	line-height: 1.5;
+}
+
+div#website  {
+    margin: 0.7em auto;
+    width: 91.4em; 
+}
+
+
+#arrow-left, #arrow-right {
+
+	visibility: hidden;
+	position: fixed;
+  	bottom: 2px;
+}
+
+
+#arrow-left { left: 20px }
+#arrow-right { right: 20px }
+#arrow-left img, #arrow-right img {width: 4em }
+
+
+/* Site structure */
+
+div.header {
+  float: left;
+	margin: 0.4em 1.4em 1em 1.4em; 
+}
+
+div.banner {
+	clear: left;
+}
+
+div.banner img {
+	width: 100%;  
+}
+
+div.footer {
+	clear: both;
+	margin: 0 17em 0 0;
+	margin-top: 0px; 
+	text-align: center;
+    font-size: 0.8em;
+    opacity: 0.5;
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
+
+div.footer .config{
+    margin: 5em auto;
+}
+
+div.content {
+  	float: left;
+	width: 80em;
+}
+
+div.page {
+  	float: left;
+	margin: 2em 1.8em 0.4em 1.8em;
+	width: 33em; 
+  	border-width: 0.6em 0 0 0.6em;
+  	border-style: solid;
+  	padding: 2em 1em;
+	overflow-y:auto;
+	overflow-x: hidden;
+	scrollbar-color: lightgrey;
+  	scrollbar-width: thin;
+}
+
+div.page::-webkit-scrollbar {
+  	width: 3px;
+  	background-color: #aaa; 
+}
+
+div.page-left {
+	border-color: #95111a;
+}
+
+div.page-right {
+	border-color: #000;
+	margin-right: 0;
+}
+
+/* Navigation top */
+
+div.navigation-top {
+  	font-family: 'Raleway', sans-serif;
+	font-size: 1.4em;
+}
+
+div.navigation-top .navbar  {
+	float: left;
+}
+
+div.navigation-top img {
+	width: 17em;
+	margin-top: 0.6em;
+	margin-left: 7.6em;
+}
+
+div.navigation-top .navbar ul {
+  	float: left;
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+}
+
+div.navigation-top .navbar ul li {
+  	float: left;
+  	border-width: 0 0 0.2em 0;
+  	border-style: solid;
+  	margin:0.3em;
+  	padding:0.3em;
+}
+
+div.navigation-top .navbar ul li:hover, div.navigation-top .navbar ul li:active  {
+	background-color: #e8e8e8;
+}
+
+div.navigation-top .navbar ul li a, div.navigation-top .navbar ul li a:visited, div.navigation-top .navbar ul li a:active, div.navigation-top .navbar ul li a:link, div.navigation-top .navbar ul li a:hover {
+  	display: block;
+  	padding: 0.2em;
+	width: 8em;
+  	text-decoration: none;
+	color: #000; 
+}
+
+/* Navigation social */
+
+div.navigation-social {
+  	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
+  	float: left;
+	margin-top: 5em;
+	margin-left: 1em;
+	width: 7em;
+  	border-width: 0.3em 0 0 0;
+  	border-style: solid;
+  	border-color: #95111a;
+}
+
+.navigation-social .navbar  {
+	float: left;
+}
+
+div.navigation-social .navbar ul {
+  float: left;
+  list-style-type: none;
+  margin: 1.2rem auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+div.navigation-social .navbar ul li {
+  	float: left;
+	width: 7em; /* same as nav-social */
+  	margin: 0.2em 0.2em 0 0;
+}
+
+div.navigation-social .navbar ul li:hover, div.navigation-social .navbar ul li:active  {
+	background-color: #e8e8e8;
+}
+
+div.navigation-social .navbar ul li a, div.navigation-social .navbar ul li a:visited, div.navigation-social .navbar ul li a:active, div.navigation-social .navbar ul li a:link, div.navigation-social .navbar ul li a:hover {
+  	display: block;
+  	padding: 0.2em;
+	width: 8em;
+  	text-decoration: none;
+	color: #000; 
+}
+
+/* Page */
+
+div.page h1.title {
+
+  	font-family: 'Raleway', sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 0.5rem 0.5rem 2rem 2rem;
+
+}
+
+div.post {
+	margin: 0;
+	clear: left;
+}
+
+div.post h2  {
+  	font-family: 'Raleway', sans-serif;
+	font-size: 1.5rem;
+	font-weight: normal;
+	padding: 0 1rem 0 1.25rem;
+	margin: 0 0 0.8rem 0;
+}
+
+div.page h2   {
+  	font-family: 'Raleway', sans-serif;
+	font-size: 1.3rem;
+	font-weight: normal;
+	padding-left: 1.4em;
+	margin: 0.9rem 0 0.8rem 0;
+}
+
+h1.title~h2  {
+	margin-top: 0;
+}
+
+div.page p, div.page .wp-block-image,
+div.post p, div.post .wp-block-image
+ {
+	padding: 0 2rem 0 2rem;
+	margin: 0 0 1.5em 0;
+  	-ms-hyphens: auto;
+  	-webkit-hyphens: auto;
+  	hyphens: auto;
+}
+
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+div.post p, div.post .wp-block-image {
+	margin: 0 0 3em 0;
+}
+
+
+figure figcaption {
+	text-align: left!important;
+
+}
+
+div.page h3 {
+	padding: 0 1.65em;
+	margin: 0 0 1em 0;
+	font-weight: bold;
+}
+
+div.page hr {
+	margin: 0.9em 0em;
+}
+
+div.page p.linkintern,
+div.page ul li a[href^="/"] {
+  	font-family: 'Raleway', sans-serif;
+	font-size: 1.2rem;
+	padding-left: 3.2rem;
+}
+
+ul.linkintern {
+	padding-left:1em;
+}
+
+ul.linkintern li {
+	list-style: none;
+	margin-top: 0.3em;
+}
+
+div.page p.linkintern a,
+div.page p.linkintern a:active,
+div.page p.linkintern a:link,
+div.page p.linkintern a:hover,
+div.page h2 a,
+div.page h2 a:active,
+div.page h2 a:link,
+div.page h2 a:hover,
+div.page ul li a[href^="/"],
+div.page ul li a[href^="/"]:active, 
+div.page ul li a[href^="/"]:link, 
+div.page ul li a[href^="/"]:hover,
+a.genre, a.genre:active, a.genre:link, a.genre:hover {
+  	text-decoration: none;
+	color: #000; 
+	margin-right: 2em;
+	line-height: 1.5;
+}
+
+div.page p.linkintern a:active,
+div.page p.linkintern a:hover,
+div.page h2 a:hover,
+div.page ul li a[href^="/"]:active,
+div.page ul li a[href^="/"]:hover,
+a.genre:active, a.genre:hover {
+	background-color: #e8e8e8;
+}
+
+div.page p.linkintern a:after,
+div.page ul li a[href^="/"]:after,
+a.genre:after {
+  content: "\00A0\2197";
+	color: #95111a;
+}
+
+div.form {
+  	font-family: 'Raleway', sans-serif;
+	font-size: 1.2em;
+	font-weight: normal;
+	padding: 0.4em 0.4em 0.4em 1.4em;
+	clear:left;
+}
+
+div.form_attribute {
+	float: left;
+	width: 11em;
+}
+
+div.attribute_format {
+	margin-top: 2em
+}
+
+div.attribute_format div.form_attribute {
+	width: 5em;
+}
+
+div.attribute_format div.form_format {
+	float: left;
+	width: 16em;
+}
+
+img#fulltext_search:hover {
+	background-color: #e8e8e8;
+} 
+
+div.form_field {
+	float:left;
+}
+
+div.form_field input{
+	font-size: 1em;
+}
+
+div.form_format {
+	font-size: 0.9em;
+	float:left;
+	width: 14em;
+}
+
+div.form_format p {
+	font-size: 0.9em;
+	float:left;
+	width: 14em;
+}
+
+div.form_field input{
+	width: 12em;
+}
+
+div.form_enter img{
+	visibility: hidden;
+	width: 4em;
+	margin-top: -1em;
+	margin-left: 1em;
+}
+
+div.form_enter input {
+	font-size: 3em;
+	margin-top: 0.2em;
+	margin-left: 0.2em;
+	color: #848584;
+	font-family: sans-serif;
+}
+
+
+/* Filmliste */
+
+#linkmerkliste {
+	visibility: hidden;
+} 
+
+div.film p:hover {
+	background-color: #e8e8e8;
+}
+
+div.film div.filminfo {
+	display: none;
+}
+
+div.film {
+	margin: 0 1em;
+}
+
+div.film-none p {
+	padding: 0 1em;
+}
+
+div.film-block p {
+	margin: 0;
+	padding: 1em;
+
+}
+
+div.film-block {
+	border-style: solid;
+	border-width: 0.2em;
+	border-color: #95111a;
+	margin: 1em;
+}
+
+div.film-block div.film-formated {
+	padding: 0 1em 1em 1em;
+}
+
+div.film-block div.film-formated div {
+	padding: 0.2em 0;
+}
+
+img.check-none, img.check-selected {
+	width: 4em;
+	float: right;
+	margin: -1em 0 0 1em;
+}
+
+img.check-green {
+	width: 2em;
+	float: right;
+	margin: -1em 0em 0 1em;
+}
+
+div.film-block div.filminfo img.check-selected {
+	display: none;
+}
+div.film-block div.filminfo img.check-none {
+	display: block;
+}
+div.film-block p img.check-green {
+	display: none;
+}
+div.film-none p img.check-green {
+	display: none;
+}
+div.film-none.film-selected p img.check-green {
+	display: block;
+}
+div.film-block.film-selected div.filminfo img.check-selected {
+	display: block;
+}
+div.film-block.film-selected div.filminfo img.check-none {
+	display: none;
+}
+
+div.film-block div.filminfo img:hover {
+	background-color: #e8e8e8;
+} 
+
+
+/*--------------------------------------------------------------
+2.0 Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	overflow: hidden;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+
