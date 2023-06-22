@@ -179,7 +179,7 @@ div.navigation-top .navbar ul li a, div.navigation-top .navbar ul li a:visited, 
   position: absolute;
   width: 2.25rem;
   height: 2px;
-  background-color: #616161;
+  background-color: #FF0000;
   transition: 0.3s;
 }
 #burger-menu > span::before {
